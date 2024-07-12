@@ -5,10 +5,6 @@
 .App-logo {
   /*scale: 0.8;*/
   max-height: 8vh;
-  /*position: absolute;*/
-  /*top: -395px;*/
-  /*left: -385px;*/
-  /*z-index: 1;*/
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,12 +31,12 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.45);
   color: white;
-  padding: 10px 20px;
+  padding: 0.5vh;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 10;
   backdrop-filter: blur(1.5px);
   display: flex;
-  justify-content: start;
+  /*justify-content: start;*/
   align-items: center;
   height: 10vh;
 }
@@ -48,7 +44,8 @@
 .Title {
   color: #793177;
   text-align: left;
-  text-indent: 5%
+  text-indent: 5%;
+  padding-right: 10vh;
 }
 
 .Background-image {
@@ -75,19 +72,66 @@
 .Background-image-info {
   color: white;
   position: absolute;
-  top: 70%;
+  top: 80%;
   max-width: 50%;
 }
 
+.Buttons {
+  margin-left: auto;
+  margin-right: 5vh;
+  height: 100%;
+  width: 30%;
+}
+
 .Button {
-  background-color: #04AA6D; /* Green */
-  border: none;
+  background-color: transparent;
+  border-color: black;
+  height: 100%;
+  width: 25%;
   color: white;
-  padding: 15px 32px;
+  cursor: pointer;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  /*display: inline-block;*/
   font-size: 16px;
+}
+
+.Calendar{
+  position: absolute;
+  z-index: 5;
+  left: 40%;
+  top: 30%;
+}
+
+.react-calendar.darkmode{
+  background-color: #aad5ee;
+}
+
+.react-calendar__tile{
+  color: black;
+}
+
+.react-calendar__tile--now{
+  background: white;
+}
+
+.react-calendar__tile--active:enabled:focus{
+  color: white;
+}
+
+.ApodTitleContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+}
+
+.ApodTitle {
+  position: absolute;
+  top: 20%;
+  color: white;
+  font-size: 30px;
 }
 
 .App-link {

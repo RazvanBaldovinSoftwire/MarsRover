@@ -1,4 +1,4 @@
-import picture_of_the_day from "../backend_calls";
+import Picture_of_the_day from "../backendCalls";
 import React, {useEffect, useState} from "react";
 
 function BackgroundOfTheDay() {
@@ -7,8 +7,11 @@ function BackgroundOfTheDay() {
 	const [author, setAuthor] = useState(null);
 	const [info, setInfo] = useState(null);
 
+	const queryParams = new URLSearchParams(window.location.search)
+	const givenDate = queryParams.get("date") ? new Date(Date.parse(queryParams.get("date"))) : new Date()
+
 	useEffect(  () => {
-		picture_of_the_day().then(json => {
+		Picture_of_the_day(givenDate).then(json => {
 			setPhotoUrl(json.hdurl)
 			setDate(json.date)
 			setAuthor(json.copyright)
