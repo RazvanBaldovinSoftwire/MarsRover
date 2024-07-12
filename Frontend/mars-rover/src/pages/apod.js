@@ -1,14 +1,12 @@
-import React, {useContext, useState} from "react";
+import React from "react";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css'
 import {Link, useNavigate} from "react-router-dom"
 
 function Apod() {
-    const [date, setDate] = useState(new Date())
     const navigate = useNavigate()
 
     const handleClick = (value) => {
-        setDate(value)
         navigate(`/?date=${value}`)
     }
 
@@ -18,13 +16,17 @@ function Apod() {
                className="Background-image"/>
           <div className="Header">
               <img src={"galaxy.png"} alt="logo"
-                   className="App-logo"/>
-              <h1 className="Title">Curiosity</h1>
+                       className="App-logo"/>
+              <Link to="/" className="Title">
+                <h1 className="Title">Curiosity</h1>
+              </Link>
               <div className="Buttons">
                   <Link to="/apod" className="Button">
                       <button className="Button">Explore the sky</button>
                   </Link>
-                  <button className="Button">Mars</button>
+                  <Link to="/mars" className="Button">
+                      <button className="Button">Mars Rover</button>
+                  </Link>
                   <button className="Button">EPIC</button>
               </div>
           </div>
@@ -34,7 +36,7 @@ function Apod() {
           </div>
 
           <div className="Calendar">
-              <Calendar className="darkmode" onChange={handleClick}/>
+              <Calendar className="lightmode" onChange={handleClick}/>
           </div>
       </div>
   );

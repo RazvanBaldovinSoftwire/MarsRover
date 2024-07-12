@@ -8,12 +8,16 @@ function Home() {
 			<BackgroundOfTheDay/>
 				<div className="Header">
 					<img src={"galaxy.png"} alt="logo" className="App-logo"/>
-					<h1 className="Title">Curiosity</h1>
+					<Link to="/" className="Title">
+						<h1 className="Title">Curiosity</h1>
+					</Link>
 					<div className="Buttons">
 						<Link to="/apod" className="Button">
 							<button className="Button">Explore the sky</button>
 						</Link>
-						<button className="Button">Mars</button>
+						<Link to="/mars" className="Button">
+							<button className="Button">Mars Rover</button>
+						</Link>
 						<button className="Button">EPIC</button>
 					</div>
 			</div>
