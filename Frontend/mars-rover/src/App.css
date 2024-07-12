@@ -3,11 +3,12 @@
 }
 
 .App-logo {
-  scale: 0.08;
-  position: absolute;
-  top: -395px;
-  left: -385px;
-  z-index: 1;
+  /*scale: 0.8;*/
+  max-height: 8vh;
+  /*position: absolute;*/
+  /*top: -395px;*/
+  /*left: -385px;*/
+  /*z-index: 1;*/
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -37,7 +38,11 @@
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 10;
-  backdrop-filter: blur(1.5px)
+  backdrop-filter: blur(1.5px);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 10vh;
 }
 
 .Title {
@@ -55,6 +60,23 @@
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+.Background-image-author {
+  color: #793177;
+  font-size: 20px;
+}
+
+.Background-image-date {
+  color: white;
+  font-size: 20px;
+}
+
+.Background-image-info {
+  color: white;
+  position: absolute;
+  top: 70%;
+  max-width: 50%;
 }
 
 .Button {
