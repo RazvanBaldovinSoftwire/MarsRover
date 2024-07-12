@@ -13,6 +13,8 @@ def curiosity_routes(app):
 		response = requests.get('https://api.nasa.gov/planetary/apod',
 								params={'date': date, 'api_key': os.getenv('NASA_API_KEY')})
 
+		print(response.json())
+
 		return response.json()
 
 	@app.route('/mars_rover', methods=['GET'])
